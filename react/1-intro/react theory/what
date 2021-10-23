@@ -1,0 +1,16 @@
+React   => is a library which is used to develop UI OR frontend
+        => It is developed by facebook
+
+
+why?
+
+1: very fast
+2: easy event handling
+3: Its small library and easy to learn
+4: It manage UI by states
+
+
+components :
+    1: functional components
+    2: class components
+  
