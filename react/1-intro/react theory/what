@@ -14,3 +14,18 @@ components :
     1: functional components
     2: class components
   
+
+
+how to use react:
+1:   first way:
+        -> use use links in header
+        {
+                <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+                <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+                <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        }
+
+2:  second way:
+        -> npx create-react-app nameOfApp
+
+-> need reference for writing react code then download extension for react in vscode
