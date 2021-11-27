@@ -8,9 +8,10 @@ body{
 
 .page-actions-cont{
     height: 3rem;
-    background-color: #187561;
+    background-color: rgb(53, 102, 53);
     display: flex;
     align-items: flex-end;
+    padding-left: 1rem;
 }
 .page-action{
     margin: 0.5rem;
@@ -19,7 +20,7 @@ body{
 
 .cellprop-actions-cont{
     height: 3rem;
-    background-color: yellowgreen;
+    background-color:#d4d8da ;
     display: flex;
     align-items: center;
     padding-left: 1rem;
@@ -43,15 +44,93 @@ body{
 
 
 .formula-actions-cont{
-    height: 3rem;
-    background-color: blueviolet;
+    height: 2rem;
+    background-color:#d4d8da ;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
 }
+
+.formula-actions-cont > * {
+    display: inline-block;
+    margin-right: 0.7rem;
+}
+
+.address-bar{
+    width: 5rem;
+}
+.formula-icon{
+    width: 1.4rem;
+}
+
+.formula-bar{
+    width: calc( 100vw - 5rem - 0.7rem - 0.7rem - 0.7rem);
+}
+
+.formula-actions-cont > input {
+    border: none;
+    outline: none;
+    height: 70%;
+}
+
 
 .sheet-actions-cont{
     height: 3rem;
-    background-color: rgb(195, 223, 72);
+    background-color:#d4d8da ;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    gap:1rem;
 }
 
+.sheet-actions-cont>*{
+    
+    display: inline-block;
+}
+
+.sheet-add-icon{
+    /* width: 2vw; */
+}
+
+.sheet-folder-cont{
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: calc(100vw - 2vw);
+}
+.sheet-folder{
+    text-decoration: underline;
+    font-weight: bold;
+    text-decoration-thickness: 3px;
+    font-size: 0.9rem;
+}
+
+
 .grid-cont{
-    height: calc(100vh - 3rem - 3rem - 3rem - 3rem);
+    height: calc(100vh - 3rem - 3rem - 2rem - 3rem);
+    position: relative;
+}
+
+.top-left-dummy-box{
+    height: 2rem;
+    width: 2rem;
+    background-color: rgb(145, 43, 145);
+}
+
+.address-col-cont{
+    height: 10rem;
+    width: 2rem;
+}
+
+.address-row-cont{
+    height: 2rem;
+}
+
+.cells-cont{
+    position: absolute;
+    top:0;
+    left:2rem;
+    width: 10rem;
+    height: 10rem;
 }
