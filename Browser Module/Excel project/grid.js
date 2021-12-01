@@ -7,7 +7,6 @@ let cellsCont = document.querySelector(".cells-cont");
 let addressBar = document.querySelector(".address-bar"); //we are selecting address bar to put the address of current selected cell
 
 
-
 for(let i=1;i<=rows;i++){
     let addressCol = document.createElement("div");
     addressCol.setAttribute("class","address-col");
