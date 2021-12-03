@@ -17,32 +17,32 @@
     <div class="options-cont">
       <i class="fas fa-bars"></i>
     </div>
-    <div class="tools-cont">
-        <span class="material-icons">
-            home
+    <div class="tools-cont scale-tools">
+        <span class="material-icons pencil">
+            edit
         </span>
-        <span class="material-icons">
+        <span class="material-icons eraser">
             auto_fix_normal
         </span>
-        <span class="material-icons">
+        <span class="material-icons download">
             download
         </span>
-        <span class="material-icons">
-            file_upload
+        <span class="material-icons image">
+            crop_original
         </span>
-        <span class="material-icons">
+        <span class="material-icons sticky">
             sticky_note_2
         </span>
-        <span class="material-icons">
+        <span class="material-icons undo">
             undo
         </span>
-        <span class="material-icons">
+        <span class="material-icons redo">
             redo
         </span>
     </div>
 
 
-    <div class="pencil-tool">
+    <div class="pencil-tool-cont">
         <div class="pencil-width-cont">
             <input type="range" min="2" max="10" value="3">
         </div>
@@ -52,8 +52,20 @@
             <div class="blue pencil-color"></div>
         </div>
     </div>
-    <div class="eraser-tool"></div>
+    <div class="eraser-tool-cont">
+        <input type="range" min="2" max="10" value="3">
+    </div>
 
-    <script src="tool.js"></script>
+    <!-- <div class="sticky-cont">
+        <div class="header-cont">
+            <div class="minimize"></div>
+            <div class="remove"></div>
+        </div>
+        <div class="note-cont">
+            <textarea></textarea>
+        </div>
+    </div> -->
+
+    <script src="./tool.js"></script>
   </body>
 </html>
