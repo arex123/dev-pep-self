@@ -5,6 +5,7 @@ let eraserToolCont = document.querySelector(".eraser-tool-cont");
 let optionsFlag = true;
 let pencil = document.querySelector(".pencil");
 let eraser = document.querySelector(".eraser");
+let upload = document.querySelector(".upload");
 let pencilFlag = false;
 let eraserFlag = false;
 let sticky = document.querySelector(".sticky");
@@ -62,6 +63,50 @@ eraser.addEventListener("click", (e) =>{
         eraserToolCont.style.display = "none";
 })
 
+upload.addEventListener("click", (e) =>{
+    //opening file explore for image chosing
+    let input  = document.createElement("input");
+    input.setAttribute("type","file");
+    input.click();
+
+    input.addEventListener("change",(e)=>{
+        let file = input.files[0];
+        let url = URL.createObjectURL(file);
+
+        
+    let stickyCont = document.createElement("div");
+    stickyCont.setAttribute("class","sticky-cont");
+    stickyCont.innerHTML= `
+    <div class="header-cont">
+            <div class="minimize"></div>
+            <div class="remove"></div>
+        </div>
+        <div class="note-cont">
+            <img src="${url}"/>
+        </div>
+        `;
+
+    document.body.appendChild(stickyCont)
+
+    let minimize = stickyCont.querySelector(".minimize");
+    let remove = stickyCont.querySelector(".remove");
+    
+    noteActions(minimize,remove,stickyCont);
+
+
+    stickyCont.onmousedown = function(event) {
+        dragAndDrop(stickyCont, event)
+    };
+      
+    stickyCont.ondragstart = function() {
+        return false;
+      };
+    
+    })
+
+})
+
+
 sticky.addEventListener("click",(e) => {
     let stickyCont = document.createElement("div");
     stickyCont.setAttribute("class","sticky-cont");
@@ -72,30 +117,31 @@ sticky.addEventListener("click",(e) => {
         </div>
         <div class="note-cont">
             <textarea></textarea>
-    </div>
+        </div>
         `;
 
     document.body.appendChild(stickyCont)
 
     let minimize = stickyCont.querySelector(".minimize");
     let remove = stickyCont.querySelector(".remove");
+    
     noteActions(minimize,remove,stickyCont);
 
 
     stickyCont.onmousedown = function(event) {
-        dragAndDrop(stickyCont,event)
+        dragAndDrop(stickyCont, event)
     };
-      
       
     stickyCont.ondragstart = function() {
         return false;
       };
     
-    
 })
 
+
+// sticky note's minimize and maximize button : not woking minimize and remove button
 function noteActions(minimize, remove, stickyCont){
-    remove.addEventListener("click",(e)=>{
+    remove.addEventListener("click", (e) => {
         stickyCont.remove();
     })
     minimize.addEventListener("click",(e)=>{
@@ -113,7 +159,7 @@ function dragAndDrop(element, event){
   
     element.style.position = 'absolute';
     element.style.zIndex = 1000;
-    document.body.append(element);
+    // document.body.append(element);  this stupid mistaken line 
   
     moveAt(event.pageX, event.pageY);
   
