@@ -11,7 +11,7 @@ let redu = document.querySelector(".redu");
 let undo = document.querySelector(".undo");
 
 
-let penColor = "red";
+let penColor = "black";
 let eraserColor = "white";
 let penWidth = pencilWidthElem.value;
 let eraserWidth = eraserWidthElem.value;
@@ -51,7 +51,7 @@ canvas.addEventListener("mouseup",(e)=>{
     //storing data for undo redu
     let url = canvas.toDataURL();
     undoRedoTracker.push(url);
-    track = undoRedoTracker.length - 1;
+    track = undoRedoTracker.length-1;
 })
 
 //redu-undo
@@ -66,8 +66,8 @@ undo.addEventListener("click", (e) =>{
     undoRedoCanvas(trackObj);
 })
 
-redu.addEventListener("click",(e) =>{
-    if(track < undoRedoTracker.length-1) track++; 
+redu.addEventListener("click", (e) =>{
+    if(track < undoRedoTracker.length - 1) track++; 
 
     // take action
     let trackObj = {
@@ -84,7 +84,7 @@ function undoRedoCanvas(trackObj){
     let url = undoRedoTracker[track];
     let img = new Image(); //new image reference element
     img.src = url;
-    img.onload = (e) =>{
+    img.onload = (e) => {
         tool.drawImage(img, 0, 0, canvas.width, canvas.height);
     }
 }
@@ -92,7 +92,7 @@ function undoRedoCanvas(trackObj){
 
 function beginPath(strokeObj){
     tool.beginPath();
-    tool.moveTo(strokeObj.x,strokeObj.y);
+    tool.moveTo(strokeObj.x, strokeObj.y);
 }
 
 function drawStroke(strokeObj){
