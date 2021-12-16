@@ -29,19 +29,33 @@ let mouseDown = false;
 //mousedown -> start new path, mousemove -> path fill (graphics)
 canvas.addEventListener("mousedown", (e) => {
     mouseDown = true;
-    beginPath({
-        x: e.clientX,
-        y: e.clientY
-    })
+    // beginPath({
+    //     x: e.clientX,
+    //     y: e.clientY
+    // })
+    let data = {
+        x:e.clientX,
+        y:e.clientY
+    }
+    socket.emit("beginPath",data); //sending data to server
 })
 
 canvas.addEventListener("mousemove",(e) =>{
-    if(mouseDown) drawStroke({
-        x:e.clientX,
-        y: e.clientY
-       ,color: eraserFlag ? eraserColor : penColor,
-        width: eraserFlag ? eraserWidth : penWidth
-    })
+    if(mouseDown) {
+        // drawStroke({
+            //     x:e.clientX,
+            //     y: e.clientY
+            //    ,color: eraserFlag ? eraserColor : penColor,
+            //     width: eraserFlag ? eraserWidth : penWidth
+            // })
+            let data = {
+                x:e.clientX,
+                y: e.clientY
+               ,color: eraserFlag ? eraserColor : penColor,
+                width: eraserFlag ? eraserWidth : penWidth
+            }
+            socket.emit("drawStroke",data);
+    }
 })
 
 canvas.addEventListener("mouseup",(e)=>{
@@ -59,22 +73,25 @@ canvas.addEventListener("mouseup",(e)=>{
 undo.addEventListener("click", (e) =>{
     if(track > 0) track--;
       // take action
-      let trackObj = {
+      let data = {
         trackValue: track,
         undoRedoTracker
     }
-    undoRedoCanvas(trackObj);
+    // undoRedoCanvas(trackObj);
+    socket.emit("reduundo",data);
 })
 
 redu.addEventListener("click", (e) =>{
     if(track < undoRedoTracker.length - 1) track++; 
 
     // take action
-    let trackObj = {
+    let data = {
         trackValue: track,
         undoRedoTracker
     }
-    undoRedoCanvas(trackObj);
+    // undoRedoCanvas(trackObj);
+    socket.emit("reduundo",data);
+
 })
 
 function undoRedoCanvas(trackObj){
@@ -136,4 +153,18 @@ download.addEventListener("click", (e) =>{
     a.href = url;
     a.download = "board.jpg";
     a.click();
+})
+
+
+//receiving data from server
+socket.on("beginPath",(data)=>{
+    beginPath(data);
+} )
+
+socket.on("drawStroke",(data)=>{
+    drawStroke(data);
+})
+
+socket.on("reduundo",(data)=>{
+    undoRedoCanvas(data);
 })
