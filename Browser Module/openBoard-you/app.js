@@ -1,7 +1,9 @@
 const express = require('express');
 const socket = require('socket.io');
 
-const app = express()
+
+const app = express();
+
 app.use(express.static("public")); //automatically it will render index.html 
 
 const port = process.env.PORT || 5000;
