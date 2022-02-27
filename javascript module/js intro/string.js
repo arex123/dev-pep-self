@@ -2,6 +2,8 @@
 
 let word= "hello there cats are eating";
 
+// more about string functions in js:  https://www.javascripttutorial.net/javascript-string-methods/
+
 //1: let arrStr = word.split(" "); // array of string which are splited string between spaces
 
 //2: let str = arrStr.join("+"); // all array string are joined together by "+" and stored in as 
