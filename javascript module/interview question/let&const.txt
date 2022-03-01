@@ -21,3 +21,12 @@ runtime: execute the code including assignments and function invocations
 
 
 read this article for more: https://wsvincent.com/javascript-temporal-dead-zone/
+
+
+
+
+| keywords  | Scope         | Reassign    | Redeclare    |  TDZ (temporary dead zone) |
+
+| var       | function      |  yes        |    yes       | No                           |   
+| let       | block         |  yes        |    No        | Yes                          |
+| const     | block         |  No         |    No        | Yes                          |
