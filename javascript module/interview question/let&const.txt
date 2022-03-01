@@ -1,0 +1,23 @@
+LET & CONST
+
+* Temporal Dead Zone 
+* { Block } scope
+* variable shadowing
+* var/let/const
+
+
+--> The Temporal Dead Zone is a behavior in JavaScript that occurs when declaring a variable with the let and const keywords, but not with var. A shorthand you’ll often hear to describe it is that “Let’s don’t hoist,” but this is not technically true
+
+
+
+--> In JavaScript, variable declarations (but not assignments) are hoisted to the top of the scope. 
+
+
+-->The JavaScript interpreter works in a two-step process:
+
+compile time: run through all code looking for variable/function declarations
+
+runtime: execute the code including assignments and function invocations
+
+
+read this article for more: https://wsvincent.com/javascript-temporal-dead-zone/
