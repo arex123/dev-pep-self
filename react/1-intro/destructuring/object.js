@@ -13,6 +13,6 @@ let obj = {
 //but in destructuring 
 
 // let {name,state,country,extra="we can define extra val also"} = obj
-
-let {name:firstname,state,country,extra=" <=we can define extra val also=>"} = obj //we can change the name also
+// console.log(name);
+let {name:firstname,state,country,extra=" <=we can define extra val also=>"} = obj //we can change the variable name for 'name' also
 console.log(firstname,state,country,extra);

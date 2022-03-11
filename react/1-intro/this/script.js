@@ -5,7 +5,6 @@
 What is this?
 The JavaScript this keyword refers to the object it belongs to.
 
-
 */
 
 
@@ -17,7 +16,8 @@ The JavaScript this keyword refers to the object it belongs to.
 //     console.log(this);
 // }
 
-// fn()
+// fn() //Global object is window ko call Kara rha h.
+
 
 // let obj = {
 //     name:"aditya",
@@ -26,7 +26,7 @@ The JavaScript this keyword refers to the object it belongs to.
 
 // obj.func() //self object
 
-/**********************************************/
+/******************************************************************************************************************************************/
 
 /*
 
@@ -51,7 +51,8 @@ obj.func()
 */
 
 
-/***********************************************/
+/*********************************************************************************************************************************************
+ * /
 
 /*
 //METHOD ! : bind function
@@ -78,26 +79,26 @@ obj.func()
 
 */
 
-/*******************************************/
+/*********************************************************************************************************************************/
 
 //METHOD 2: Array function
 
 
-function fn(){
-    console.log(this);  // ye this obj ko point kar raha h
-        abc = () => {
-        console.log(this);  // Arrow function parent obj ko point karwata h to ye bhi ab 
-                            // obj ko point karega
-    }
+// function fn(){
+//     console.log(this);  // ye this obj ko point kar raha h
+//         abc = () => {
+//         console.log(this);  // Arrow function parent obj ko point karwata h to ye bhi ab 
+//                             // obj ko point karega
+//     }
     
-    abc();
+//     abc();
 
-}
+// }
 
 
-let obj = {
-    name:"aditya",
-    func: fn  //fn returns function to func
-}
+// let obj = {
+//     name:"aditya",
+//     func: fn  //fn returns function to func
+// }
 
-obj.func()
+// obj.func()

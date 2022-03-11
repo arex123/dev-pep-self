@@ -1,19 +1,19 @@
-// let obj = {
-//     name: "username",
-//     add:{
-//         country:"india",
-//         state:{
-//             code:"DL",
-//             pin:"11111"
-//         }
-//     }
-// }
+let obj = {
+    name: "username",
+    add:{
+        country:"india",
+        state:{
+            code:"DL",
+            pin:"11111"
+        }
+    }
+}
 
-// let obj2 = obj;
-// obj2.name = "abcd"
+let obj2 = obj;
+obj2.name = "abcd"
 
-// console.log(obj);
-// console.log(obj2); 
+console.log(obj);
+console.log(obj2); 
 
 //obj2 mai change karne ki wajah se obj mai bhi change ho gya isko avoid karne ke liye 
 //hum spread operator use karenge usme, deep
@@ -48,16 +48,16 @@ Deep Copy. A deep copy copies all fields, and makes copies of dynamically alloca
 
 
 //now doing copy of obj and then changing in its copy obj2 without affecting it
-let obj = {
-    name: "username",
-    add:{
-        country:"india",
-        state:{
-            code:"DL",
-            pin:"11111"
-        }
-    }
-}
+// let obj = {
+//     name: "username",
+//     add:{
+//         country:"india",
+//         state:{
+//             code:"DL",
+//             pin:"11111"
+//         }
+//     }
+// }
 
 /*
 
@@ -69,11 +69,11 @@ obj2.name = "user";
 
 */
 
-let obj2 = {...obj,add:{...obj.add,state:{...obj.add.state}}}; //it is deep copy, copying child obj to new address 
+// let obj2 = {...obj,add:{...obj.add,state:{...obj.add.state}}}; //it is deep copy, copying child obj to new address 
 
-obj2.name = "abcd";
-obj2.add.country = "usa";
-obj2.add.state.code = "NY";
+// obj2.name = "abcd";
+// obj2.add.country = "usa";
+// obj2.add.state.code = "NY";
 
-console.log(obj);
-console.log(obj2);
+// console.log(obj);
+// console.log(obj2);

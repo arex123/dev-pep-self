@@ -20,13 +20,12 @@ function simplearr(){
 function spread(){
     var arr = [1,2,3]  // original array
 
-    console.log(arr);  //simple arr
-    console.log(...arr);  //list
+    // console.log(arr);  //simple arr
+    // console.log(...arr);  //list
 
     var arr2 = [...arr]
-
-    arr2.push(8)
-
+    arr2.push(10)
+   
     console.log(arr);
     console.log(arr2) //now it is changed without affecting original arr variable
 

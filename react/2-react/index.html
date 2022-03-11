@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script> 
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <title>Document</title>
@@ -64,12 +64,12 @@
             </div>
         )
     }
-
+                            
+            // React.Fragment, it is a wrapper , we can use div also to wrap, wrapping is imported
+            // in returning in react , if there are multiple element , we neet to wrap it or else it will give error
     function Main(){  //first letter of function name should be in Capital
         return(
-            <React.Fragment> // React.Fragment, it is a wrapper , we can use div also to wrap, wrapping is imported
-                            // in returning in react , if there are multiple element , we neet to wrap it or else it will give error
-
+            <React.Fragment>
 
                 <Element name='Aditya' place='delhi'/>
                 <Element/>
@@ -93,17 +93,12 @@
 
     Statuc UI-> function component ( ab hooks ki madad se functional component ko bhi hum dynammic bana sakte h )
 
-    Dynamic -> class companent
+    Dynamic -> class component
         ->state: state is an react obj , which will contain info/properties of component
 
         -> render: display on UI
 
          #jab bhi state change hoti h , react re-render call kar deta h
-
-
-
-
-
 
 
 

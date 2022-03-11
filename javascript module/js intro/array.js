@@ -3,7 +3,7 @@
 
 // more imp functions about arrays in js:  https://www.javascripttutorial.net/javascript-array-methods/
 
-// 1 : let res = arr.flat(Infinity); // it will make one array from nested array
+// 1 : let res = arr.flat(Infinity); // it will make(copy) one array from nested array
 
 // console.log(arr.length);
 // console.log(res.length);
