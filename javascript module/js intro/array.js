@@ -39,7 +39,7 @@
 
 // 6 : slice(idx,idx) it will make copy of array from specified index
 
-let arr = [1,2,3,4,5,6,7,8];
+// let arr = [1,2,3,4,5,6,7,8];
 
 // let partOfArray = arr.slice(2,6); // including 2nd element but till 6th(not including 6th element)
 // console.log(partOfArray);
@@ -61,5 +61,11 @@ let arr = [1,2,3,4,5,6,7,8];
 
 // 8:  arr.indexOf(element) it will give the index value of element,
 // if element is not present it will print -1
-console.log(arr.indexOf(15)); 
+// console.log(arr.indexOf(15)); 
 
+let arr = [1,5,6,7,8];
+
+let r = [...arr,20] // copying all array element in new array and adding new element and 
+
+console.log(arr); //[ 1, 5, 6, 7, 8 ]
+console.log(r); //[ 1, 5, 6, 7, 8, 20 ]
