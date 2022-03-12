@@ -51,7 +51,7 @@ class Todo extends Component {
             Always use arrow function for getting the this object of parent class, or if u want to use simple function , then remember it will 
             always make its own this so for using this of parent function use  .bind(this), in function 
             */
-           return task.id!=id
+           return task.id!==id;
         })
         
         // let newIndex = 0;
