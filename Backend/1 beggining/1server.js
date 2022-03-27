@@ -24,3 +24,31 @@ and that's why below line tells to listen local host at 3000 server
 server.listen(3000,'localhost',()=>{
     console.log('server is listining on port 3000');
 })
+
+/*
+ramans code:
+*/
+/*
+const http=require('http')
+ const fs=require('fs')
+const server=http.createServer((req,res)=>
+{
+    console.log("server connected with brower");
+    console.log(req.url);
+    console.log(req.method);
+
+    //send the response server to brower
+    res.setHeader('conten-Type','text/html')
+    let path='./views'
+    switch(req.url){
+        case '/':
+            path+='/index.html'
+            break;
+
+        case '/about':
+           path+='/aboutUs.html'
+           break;
+        default :
+       
+
+*/

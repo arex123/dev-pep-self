@@ -7,9 +7,23 @@ app.use(express.json())
 
 app.listen(3000)
 
-let users={};
+let users=[
+    {
+        'id':1,
+        'name':"Aditya"
+    },
+    {
+        'id':2,
+        'name':"sun"
+    },
+    {
+        'id':3,
+        'name':"badal"
+    }
+];
 
 app.get('/user',(req,res)=>{
+    console.log(req.query); //it will give url query
     res.send(users)
 })
 
@@ -37,9 +51,27 @@ app.patch('/user',(req,res)=>{
     })
 })
 
+
+//delete
 app.delete('/user',(req,res)=>{
     users={}
     res.json({
         message:"data has been deleted"
     })
+})
+
+
+//params
+// app.get('/user/:id',(req,res)=>{
+//     console.log(req.params.id)
+//     console.log(req.params)
+//     res.send("user id recieved")
+// })
+
+
+//params for username , both params are same
+app.get('/user/:username',(req,res)=>{
+    console.log(req.params.username);  //it will give url parameter
+    console.log(req.params);
+    res.send("user username received")
 })
