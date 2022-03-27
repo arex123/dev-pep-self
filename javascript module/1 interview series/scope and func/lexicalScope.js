@@ -6,7 +6,7 @@ function b(){
     /*
         so we have called b() from fn(),fn() has its varName
         so there is confusion that which varName to use 
-        varname from line 2 or varname from line 15
+        varname from line 2 or varname from line 16
         lexical scope says to print 10 here
     */
 }

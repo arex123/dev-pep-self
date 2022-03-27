@@ -6,7 +6,7 @@ function real(){
     console.log("😮 No I am real one");
 }
 function real(){
-    console.log("You both are wasted");
+    console.log("You both are wasted");   //  <<<----- last one will overwrite above same name function in the execution context box
 }
 
 /* 

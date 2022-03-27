@@ -13,3 +13,12 @@ console.log(f); //banana
     console.log(f); //kiwi
 }
 console.log(f); //banana
+
+
+var ft = "banana"
+console.log(ft); //banana
+{
+    var ft = "orange"
+    console.log(ft); //orange
+}
+console.log(ft);  //orange
