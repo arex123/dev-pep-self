@@ -114,7 +114,7 @@ async function postSignUp(req,res){
 
 //mongoose connect
 
-const db_link=url;
+const db_link=url; //for url check in env file
 mongoose.connect(db_link)
 .then(function(db){
     
