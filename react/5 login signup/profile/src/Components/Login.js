@@ -13,8 +13,17 @@ import TextField from '@mui/material/TextField'; //for input
 import { makeStyles } from '@mui/styles';
 import cloudUploadIcon from '@material-ui/icons/CloudUpload';
 import { Link } from 'react-router-dom';
+import {Tabs, Tab} from '@mui/material'
+import { useState } from 'react';
 
 export default function Login() {
+
+    // const [values,setValues] = useState("");
+    // const handleChange=(e)=>{
+    //     e.preventDefault();
+    
+    //     setValues(e.target.value);
+    // }
     
     const useStyle = makeStyles({
         text1:{
@@ -32,7 +41,21 @@ export default function Login() {
     const classes = useStyle();
 
   return (
+
+
+
       <div className="LoginWrapper">
+      <Tabs
+            value={value}
+            onChange={handleChange}
+            textColor="secondary"
+            indicatorColor="secondary"
+            aria-label="secondary tabs example"
+            >
+            <Tab value="one" label="Item One" />
+            <Tab value="two" label="Item Two" />
+            <Tab value="three" label="Item Three" />
+      </Tabs>
         
           <div className='LoginCard'>
             <Card variant='outlined'>
